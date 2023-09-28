@@ -25,6 +25,8 @@ public class Archer implements Characters{
         return this.avatar;
     }
 
+    
+
     public void setName(String name){
         this.name=name;
     }

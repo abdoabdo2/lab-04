@@ -11,7 +11,12 @@ public class Knight implements Characters {
             throw new IllegalArgumentException("Character must have a name");
         }
         this.name=name;
-        this.avatar=new Avatar(SkinTone.MEDIUM, HairType.LONG_STRAIGHT, HairColor.BLACK, BodyType.MUSCULAR, FacialFeatures.LIGHT_BEARD);
+       // this.avatar=new Avatar(SkinTone.MEDIUM, HairType.LONG_STRAIGHT, HairColor.BLACK, BodyType.MUSCULAR, FacialFeatures.LIGHT_BEARD);
+       this.avatar = new Avatar.Builder(SkinTone.MEDIUM)
+       .withHairType(HairType.LONG_STRAIGHT)
+       .withHairColor(HairColor.BLACK)
+       .withBodyType(BodyType.MUSCULAR)
+       .withFacialFeatures(FacialFeatures.LIGHT_BEARD).build();
     }
     public String getName(){
         return this.name;

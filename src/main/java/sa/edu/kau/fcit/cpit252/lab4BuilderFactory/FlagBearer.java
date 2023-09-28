@@ -10,7 +10,9 @@ public class FlagBearer implements Characters{
             throw new IllegalArgumentException("Character must have a name");
         }
         this.name=name;
-        this.avatar=new Avatar(SkinTone.LIGHT, HairType.CURLY, HairColor.BROWN, BodyType.SKINNY,FacialFeatures.GOATEE);
+       // this.avatar=new Avatar(SkinTone.LIGHT, HairType.CURLY, HairColor.BROWN, BodyType.SKINNY,FacialFeatures.GOATEE);
+       this.avatar = new Avatar.Builder(SkinTone.LIGHT)
+       .withHairType(HairType.CURLY).withHairColor(HairColor.BROWN).withBodyType(BodyType.SKINNY).withFacialFeatures(FacialFeatures.GOATEE).build();
     }
     public String getName(){
         return this.name;
